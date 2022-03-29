@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="5.15.4" />
+    <PackageReference Include="SqlTableDependency" Version="8.5.8" />
+    <PackageReference Include="System.Data.OleDb" Version="6.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AForge.Video.DirectShowEx">
+      <HintPath>bin\Debug\net5.0-windows\AForge.Video.DirectShowEx.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.VideoEx">
+      <HintPath>bin\Debug\net5.0-windows\AForge.VideoEx.dll</HintPath>
+    </Reference>
+    <Reference Include="ConnectionConfig">
+      <HintPath>..\..\..\iParking_new\ConnectionConfig\bin\Debug\net5.0-windows\ConnectionConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="Kztek.Cameras">
+      <HintPath>bin\Debug\net5.0-windows\Kztek.Cameras.dll</HintPath>
+    </Reference>
+    <Reference Include="Kztek.RtspPlayer">
+      <HintPath>bin\Debug\net5.0-windows\Kztek.RtspPlayer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
